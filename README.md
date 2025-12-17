@@ -1,142 +1,89 @@
-# 🛒 Application Web E-commerce
+# Application Web E-commerce
 
-## 📑 Table des matières
+## Table des matieres
 
-## Table des matières
-
-- [Présentation](#presentation)
+- [Presentation](#presentation)
 - [Architecture du projet](#architecture-du-projet)
-- [Technologies utilisées](#technologies-utilisees)
+- [Technologies utilisees](#technologies-utilisees)
+- [Base de donnees](#base-de-donnees)
 - [Installation](#installation)
-- [Configuration de la base de données](#configuration-de-la-base-de-donnees)
-- [Lancement du projet](#lancement-du-projet)
+- [Configuration de la base de donnees](#configuration-de-la-base-de-donnees)
+- [Lancement de l application](#lancement-de-l-application)
+- [Fonctionnement du back-end](#fonctionnement-du-back-end)
+- [Fonctionnalites](#fonctionnalites)
+- [Auteur](#auteur)
 
 ---
 
-## 📌 Description
+## Presentation
 
-Cette application est une **boutique en ligne** développée en **HTML, CSS, JavaScript, PHP et MySQL**.  
-Elle permet à un utilisateur de :
+Cette application est une boutique en ligne developpee en HTML, CSS, JavaScript, PHP et MySQL.
 
-- consulter des produit
-
-## 📌 Description
-
-Cette application est une **boutique en ligne** développée en **HTML, CSS, JavaScript, PHP et MySQL**.  
-Elle permet à un utilisateur de :
+Elle permet a un utilisateur de :
 
 - consulter des produits
-- s’inscrire / se connecter
-- gérer un panier
+- s inscrire et se connecter
+- gerer un panier
 - passer des commandes
-- consulter son profil et l’historique de ses commandes
+- consulter son profil et l historique de ses commandes
 
-Le projet suit une **architecture MVC simplifiée** (Model – Controller – View).
-
----
-
-## 🏗️ Architecture du projet
-
-TP/
-├── backend/
-│ ├── controllers/
-│ │ ├── UserController.php
-│ │ ├── ProductController.php
-│ │ └── OrderController.php
-│ ├── models/
-│ │ ├── Database.php
-│ │ ├── User.php
-│ │ ├── Product.php
-│ │ └── Order.php
-│ └── index.php # Point d’entrée de l’API
-│
-├── public/
-│ ├── assets/
-│ ├── pannier/
-│ ├── product/
-│ ├── profil/
-│ ├── signin/
-│ ├── signUp/
-│ ├── orders/
-│ ├── uploads/
-│ │ └── images/
-│ │ └── products/
-│ │ ├── chaussures/
-│ │ ├── vetements/
-│ │ ├── sacs/
-│ │ ├── montres/
-│ │ └── lunettes/
-│ ├── index.html
-│ ├── app.js
-│ └── style.css
-│
-├── database/
-│ └── ecommerce.sql # Base de données exportée
-│
-└── README.md
+Le projet suit une architecture MVC simplifiee (Model – Controller – View).
 
 ---
 
-## ⚙️ Technologies utilisées
+## Architecture du projet
 
-- **Front-end** : HTML, CSS, JavaScript (Vanilla)
-- **Back-end** : PHP (PDO)
-- **Base de données** : MySQL
-- **Serveur local** : XAMPP / WAMP / MAMP
+Le projet est structure en deux parties principales :
 
----
-
-## 🗄️ Base de données
-
-La base de données a été **exportée** et se trouve dans le dossier :
-
-/database/ecommerce.sql
-
-### Tables principales
-
-- `users`
-- `products`
-- `orders`
-- `order_items`
-
-📸 Les images des produits **ne sont pas stockées en base**, mais dans :
-
-public/uploads/images/products/
-
-La base de données contient uniquement **le chemin vers l’image**.
+- Front-end : interface utilisateur
+- Back-end : logique metier et acces a la base de donnees
 
 ---
 
-## ▶️ Installation & Lancement
+## Technologies utilisees
 
-### 1️⃣ Installer un serveur local
-
-Installer **XAMPP** (ou équivalent) avec :
-
-- Apache
+- HTML
+- CSS
+- JavaScript (Vanilla)
+- PHP (PDO)
 - MySQL
+- XAMPP / WAMP / MAMP
+- Git / GitHub
 
 ---
 
-### 2️⃣ Placer le projet
+## Base de donnees
 
-Copier le dossier `TP` dans : C:\xampp\htdocs\
+La base de donnees a ete exportee et se trouve dans : /database/ecommerce.sql
+
+Tables principales :
+
+- users
+- products
+- orders
+- order_items
+
+Les images des produits sont stockees dans : public/uploads/images/products/
+
+La base de donnees contient uniquement le chemin vers les images.
 
 ---
 
-### 3️⃣ Importer la base de données
+## Installation
 
-1. Ouvrir **phpMyAdmin**
-2. Créer une base de données nommée : ecommerce
+1. Installer un serveur local (XAMPP ou equivalent)
+2. Activer Apache et MySQL
+3. Copier le dossier `TP` dans : C:\xampp\htdocs\
+
+---
+
+## Configuration de la base de donnees
+
+1. Ouvrir phpMyAdmin
+2. Creer une base de donnees nommee `ecommerce`
 3. Importer le fichier : database/ecommerce.sql
 
----
-
-### 4️⃣ Configuration de la base de données
-
-Dans le fichier : backend/models/Database.php
-
-Vérifier les paramètres de connexion :
+Verifier le fichier : backend/models/Database.php
 
 ```php
 private $host = "localhost";
@@ -144,49 +91,57 @@ private $db   = "ecommerce";
 private $user = "root";
 private $pass = "";
 
-5️⃣ Lancer l’application
+Lancement de l application
 
-Ouvrir un navigateur et accéder à : http://localhost/TP/public/index.html
+Ouvrir un navigateur et acceder a : http://localhost/TP/public/index.html
 
-🔐 Authentification
+Fonctionnement du back-end
 
-L’authentification est gérée côté front-end via localStorage
-
-Les pages profil, panier et commandes sont protégées
-
-Redirection automatique vers l’inscription si l’utilisateur n’est pas connecté
-
-🔁 Fonctionnement du Back-end (API)
-
-Le front-end communique avec le back-end via fetch
+Le front-end communique avec le back-end via fetch.
 
 Toutes les routes passent par : backend/index.php
 
-Exemple d’actions API :
+Exemples d actions API :
+
 ?action=products
+
 ?action=login
+
 ?action=register
+
 ?action=order
 
-Rôle des composants
+Role des composants
 
-Controllers : exposent les endpoints API, valident les données et retournent des réponses JSON
+Controllers : exposent les endpoints API et retournent du JSON
 
-Models : contiennent les classes métier et interagissent avec la base de données via PDO
+Models : contiennent la logique metier et interagissent avec MySQL via PDO
 
-📦 Fonctionnalités principales
+Fonctionnalites
 
-✔ Inscription / Connexion
-✔ Consultation des produits
-✔ Gestion du panier
-✔ Passage de commande
-✔ Profil utilisateur
-✔ Historique des commandes
+Inscription et connexion
 
-👩‍💻 Auteur
+Consultation des produits
+
+Gestion du panier
+
+Passage de commande
+
+Profil utilisateur
+
+Historique des commandes
+
+Auteur
 
 Nouha
 Licence Informatique – L3
-Année universitaire 2024–2025
+Annee universitaire 2024–2025
+
+
+
+
+
+
+
 
 ```
