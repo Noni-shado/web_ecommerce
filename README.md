@@ -91,8 +91,9 @@ private $db   = "ecommerce";
 private $user = "root";
 private $pass = "";
 
-Lancement de l application
+---
 
+## Lancement de l application
 Ouvrir un navigateur et acceder a : http://localhost/TP/public/index.html
 
 Fonctionnement du back-end
@@ -117,7 +118,7 @@ Controllers : exposent les endpoints API et retournent du JSON
 
 Models : contiennent la logique metier et interagissent avec MySQL via PDO
 
-Fonctionnalites
+## Fonctionnalites
 
 Inscription et connexion
 
@@ -131,7 +132,7 @@ Profil utilisateur
 
 Historique des commandes
 
-Auteur
+## Auteur
 
 Nouha
 Licence Informatique – L3
