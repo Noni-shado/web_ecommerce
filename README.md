@@ -1,23 +1,15 @@
 # 🛒 Application Web E-commerce
 
-# 🛒 Application Web E-commerce
-
 ## 📑 Table des matières
 
-- [📌 Description](#-description)
-- [🏗️ Architecture du projet](#️-architecture-du-projet)
-- [⚙️ Technologies utilisées](#️-technologies-utilisées)
-- [🗄️ Base de données](#️-base-de-données)
-- [🚀 Installation & Lancement](#-installation--lancement)
-  - [1️⃣ Installer le serveur local](#1️⃣-installer-le-serveur-local)
-  - [2️⃣ Placer le projet](#2️⃣-placer-le-projet)
-  - [3️⃣ Importer la base de données](#3️⃣-importer-la-base-de-données)
-  - [4️⃣ Configuration de la base](#4️⃣-configuration-de-la-base)
-  - [5️⃣ Lancer l’application](#5️⃣-lancer-lapplication)
-- [🔐 Authentification](#-authentification)
-- [🔁 Fonctionnement du Back-end](#-fonctionnement-du-back-end)
-- [📦 Fonctionnalités](#-fonctionnalités)
-- [👩‍💻 Auteur](#-auteur)
+## Table des matières
+
+- [Présentation](#presentation)
+- [Architecture du projet](#architecture-du-projet)
+- [Technologies utilisées](#technologies-utilisees)
+- [Installation](#installation)
+- [Configuration de la base de données](#configuration-de-la-base-de-donnees)
+- [Lancement du projet](#lancement-du-projet)
 
 ---
 
