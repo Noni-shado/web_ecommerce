@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Boutique JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="main-header">
+  <div class="header-left">
+    <a href="../index.html" class="logo">
+      <span class="logo-icon">🛍️</span>
+      <span class="logo-text">Boutique</span>
+    </a>
+  </div>
+
+  <div class="header-right">
+    <!-- Panier -->
+    <a href="./pannier/pannier.html" class="cart-link">
+      🛒
+      <span class="cart-text">Panier</span>
+      <span id="cart-count" class="cart-count">0</span>
+    </a>
+
+    <!-- User menu -->
+    <div class="user-menu">
+      <button id="user-btn" class="user-btn">
+        👤
+      </button>
+
+      <div id="user-dropdown" class="user-dropdown hidden">
+        <a href="profil/profil.html">👤 Profil</a>
+        <a href="orders/orders.html">📦 Mes commandes</a>
+        <button id="logout-btn" class="logout-btn">🚪 Déconnexion</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div id="products"></div>
+    <div id="pagination">
+    <button id="prev">⬅ Précédent</button>
+    <span id="page-number">1</span>
+    <button id="next">Suivant ➡</button>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
