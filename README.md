@@ -90,59 +90,51 @@ private $host = "localhost";
 private $db   = "ecommerce";
 private $user = "root";
 private $pass = "";
+```
 
 ---
 
 ## Lancement de l application
-Ouvrir un navigateur et acceder a : http://localhost/TP/public/index.html
 
-Fonctionnement du back-end
+Ouvrir un navigateur et acceder a :
+http://localhost/TP/public/index.html
 
-Le front-end communique avec le back-end via fetch.
+---
 
-Toutes les routes passent par : backend/index.php
+## Fonctionnement du back-end
+
+Le front-end communique avec le back-end via `fetch`.
+
+Toutes les routes passent par :
+backend/index.php
 
 Exemples d actions API :
 
-?action=products
+- ?action=products
+- ?action=login
+- ?action=register
+- ?action=order
 
-?action=login
+### Role des composants
 
-?action=register
+- Controllers : exposent les endpoints API et retournent du JSON
+- Models : contiennent la logique metier et interagissent avec MySQL via PDO
 
-?action=order
-
-Role des composants
-
-Controllers : exposent les endpoints API et retournent du JSON
-
-Models : contiennent la logique metier et interagissent avec MySQL via PDO
+---
 
 ## Fonctionnalites
 
-Inscription et connexion
+- Inscription et connexion
+- Consultation des produits
+- Gestion du panier
+- Passage de commande
+- Profil utilisateur
+- Historique des commandes
 
-Consultation des produits
-
-Gestion du panier
-
-Passage de commande
-
-Profil utilisateur
-
-Historique des commandes
+---
 
 ## Auteur
 
-Nouha
-Licence Informatique – L3
+Nouha  
+Licence Informatique – L3  
 Annee universitaire 2024–2025
-
-
-
-
-
-
-
-
-```
